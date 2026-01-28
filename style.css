@@ -36,6 +36,7 @@
 }
 *{
     box-sizing: border-box;
+    word-wrap: break-word;
 }
 
 body{
@@ -48,6 +49,7 @@ html, body{
     font-family: 'Poppins', sans-serif;
     background-color: #000;
     color: white;
+    overflow-x: hidden;
     
 }
 
@@ -68,42 +70,85 @@ html, body{
 }
 
 
+/* optional: agar custom glow chahiye */
+.nav-border-active {
+  box-shadow: 0 2px 0 rgba(251,191,36,0.8); /* amber-100 */
+}
+
+
 .View-2 {
-    width: 100%;
-    padding: 4rem 3rem;
-    display: flex;
-    justify-content: center;
-
-
-
+   width: 100%;
+  padding: 3rem 3rem;
+  display: flex;
+  justify-content: center;
 }
 
 .View-2 .marquee {
     display: flex;
-
-    width: 35%;
+    width: 90%;              /* default mobile */
+    max-width: 600px;        /* desktop limit */
     overflow: hidden;
     position: relative;
 
-
-
-    mask-image: linear-gradient(to right, transparent 0%,black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
 }
 
 .View-2 .marquee .text {
     display: flex;
-    gap: 3rem;
-    padding: 0 1.5rem;
-
-    animation: marquee 10s linear infinite both;
+    gap: 2rem;
+    padding: 0 1rem;
+    animation: marquee 12s linear infinite;
 }
 
 .View-2 .marquee .text a {
-    font-size: 2rem;
+    font-size: 1.2rem;   /* mobile base */
     font-weight: 300;
-    
     text-decoration: none;
+    white-space: nowrap;
 }
+
+@media (max-width: 640px) {
+  .View-2 {
+    padding: 1.5rem 1rem;   /* yahin main fix */
+    margin-top: -10rem; 
+    margin-bottom: 11rem;     /* image ke thoda paas laane ke liye */
+  }
+
+  .View-2 .marquee {
+    width: 80%;            /* mobile me zyada visible */
+  }
+
+  .View-2 .marquee .text a {
+    font-size: 1.2rem;     /* text bhi chhota */
+  }
+
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .View-2 .marquee {
+    width: 70%;
+  }
+
+  .View-2 .marquee .text a {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1025px) {
+  .View-2 .marquee {
+    width: 35%;
+  }
+
+  .View-2 .marquee .text a {
+    font-size: 2rem;
+  }
+}
+
 
 @keyframes marquee {
     0% {

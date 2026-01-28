@@ -11,65 +11,177 @@
 
 <body>
 
+  <!-- Nav Bar -->
 
+  <nav class="fixed top-0 z-50 w-full backdrop-blur bg-black/40 border-b border-white/10 md:border-b-0 transition-all duration-300">
 
-  <nav class="fixed top-0 z-50 h-[9vh] w-full
-            
-          md backdrop-blur ">
+    <div class="h-[8vh] flex items-center justify-between px-4 sm:px-8">
 
-    <div class="h-[8vh] flex w-full justify-between items-center px-10">
-      <div
-        class=" bg-transparent text-amber-100 font-extralight text-2xl font-[Abel] uppercase tracking-[0.30em] cursor-pointer hover:text-red-500 transition">
-        Prashant<span class="text-4xl text-red-500">.</span></div>
-
-      <div class="flex gap-8 items-center text-white text-[1.3rem]">
-        <span
-          class="nav-item text-amber-100 font-extralight cursor-pointer hover:text-red-500 transition tracking-[0.10em]"
-          data-target="home">Home</span>
-        <span class=" tracking-[0.05em] nav-item font-extralight cursor-pointer resume-rotate inline-block border-none text-amber-100
-                                  animate-[subtle-shake_1.6s_ease-in-out_infinite]
-                                    transition-all duration-300
-                                hover:scale-[1.08]  bg-red-500
-                             rounded
-                              px-3 py-1" data-target="resume">Resume</span>
-        <span
-          class=" tracking-[0.10em] text-amber-100 font-extralight nav-item cursor-pointer hover:text-red-500 transition"
-          data-target="about">About</span>
-        <span
-          class=" tracking-[0.10em] text-amber-100 font-extralight nav-item cursor-pointer hover:text-red-500 transition"
-          data-target="projects">Projects</span>
-        <span
-          class=" tracking-[0.10em] text-amber-100 font-extralight nav-item cursor-pointer hover:text-red-500 transition"
-          data-target="contact">Contact</span>
+      <!-- LOGO -->
+      <div class="text-amber-100 font-[Abel] uppercase tracking-[0.25em] text-base sm:text-lg md:text-2xl font-extralight cursor-pointer hover:text-red-500 transition">
+        Prashant
+        <span class="text-red-500 text-lg sm:text-xl md:text-3xl">.</span>
       </div>
+
+      <!-- DESKTOP MENU -->
+      <div class="hidden md:flex gap-8 items-center text-[1.1rem]">
+        <span class="nav-item text-amber-100 hover:text-red-500" data-target="home">Home</span>
+        <span class="nav-item bg-red-500 text-amber-100 px-3 py-1 rounded animate-[subtle-shake_1.6s_ease-in-out_infinite]" data-target="resume">Resume</span>
+        <span class="nav-item text-amber-100 hover:text-red-500" data-target="about">About</span>
+        <span class="nav-item text-amber-100 hover:text-red-500" data-target="projects">Projects</span>
+        <span class="nav-item text-amber-100 hover:text-red-500" data-target="contact">Contact</span>
+      </div>
+
+      <!-- HAMBURGER -->
+      <button id="menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 text-amber-100 hover:text-red-500 transition" aria-label="Open Menu">
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"
+          class="w-7 h-7">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" 
+         class="hidden md:hidden absolute top-[8vh] left-0 w-full bg-black/95 backdrop-blur px-8 py-10 space-y-6 text-lg z-50">
+
+      <ul class="space-y-5">
+        <li class="nav-item text-amber-100 border-b border-white/10 pb-2" data-target="home">Home</li>
+        <li class="nav-item text-amber-100 border-b border-white/10 pb-2" data-target="resume">Resume</li>
+        <li class="nav-item text-amber-100 border-b border-white/10 pb-2" data-target="about">About</li>
+        <li class="nav-item text-amber-100 border-b border-white/10 pb-2" data-target="projects">Projects</li>
+        <li class="nav-item text-amber-100" data-target="contact">Contact</li>
+      </ul>
     </div>
   </nav>
-  <section id="home" class="  flex items-center justify-center min-h-screen bg-black text-white">
-    <div class=" relative text-[15rem] m-10 font-bold text-amber-100 font-[PlayfairDisplay]">PORTFOLIO
-      <h2 class="absolute text-[3rem] right-[0%] bottom-[6%] font-[PlayfairDisplay]">UI<span
-          class="text-red-500">/</span>UX <span class="text-red-500 text-3xl"> <span>D</span>esigner</span> </h2>
-      <h2 class="absolute text-[8rem] left-[-7%] bottom-[0%] text-red-500 font-[Tangerine] font-bold">React
-        Developer
-      </h2>
+
+
+  <!-- Done Nav Responsive -->
+
+  <section id="home" class="relative bg-black text-white overflow-hidden" style="height: 100svh;">
+    <div class="flex
+                flex-col
+                items-center
+                justify-start
+                pt-35              /* 🔥 sirf yahin se mobile control */
+                md:pt-0
+                md:justify-center
+                min-h-screen">
+
+      <!-- PORTFOLIO WRAPPER -->
+      <div class="
+        relative
+        inline-block
+        font-[PlayfairDisplay]
+        font-bold
+        text-amber-100
+
+        text-[3rem]
+        sm:text-[2rem]
+        md:text-[6rem]
+        lg:text-[8.5rem]
+        xl:text-[10rem]
+
+        leading-none
+        whitespace-nowrap
+      ">
+        PORTFOLIO
+
+
+        <!-- React Developer (BOTTOM LEFT of PORTFOLIO) -->
+        <span class="
+                      absolute
+                      left-[11%]
+                      -translate-x-1/2
+                      top-[55%]
+                      md:bottom-[-12z%]
+
+                      md:left-[14%]
+                      md:top-auto
+                      md:bottom-[-12%]
+
+                      font-[Tangerine]
+                      font-bold
+                      text-red-500
+                      text-[1.9rem]
+                      sm:text-[2rem]
+                      md:text-[3rem]
+                      lg:text-[5rem]
+                      whitespace-nowrap
+        ">
+          React Developer
+        </span>
+
+        <!-- UI / UX Designer (BOTTOM RIGHT of PORTFOLIO) -->
+        <span class="
+                    absolute
+                    left-[90%]
+                    -translate-x-1/2
+                    top-[90%]
+                    md:bottom-[-15%]
+
+                    md:left-auto
+                    md:right-[-10%]
+                    md:top-auto
+                    md:bottom-[-10%]
+
+                    font-[PlayfairDisplay]
+                    text-amber-100
+                    text-[0.9rem]
+                    sm:text-[1rem]
+                    md:text-[1.5rem]
+                    lg:text-[2rem]
+                    whitespace-nowrap
+        ">
+          UI<span class="text-red-500">/</span>UX
+          <span class="text-red-500">Designer</span>
+        </span>
+
+      </div>
+
+      <!-- IMAGE (CENTER OF PORTFOLIO) -->
+        <img src="/images/Picsart_26-01-28_00-03-22-409.png" alt="" 
+        class="absolute
+                left-1/2
+                top-[52%]
+                md:top-[58%]
+
+                -translate-x-[50%]   /* 🔥 mobile PNG correction */
+                -translate-y-1/2
+
+                w-[33rem]            /* mobile bigger */
+                sm:w-[20rem]
+                md:w-[20rem]
+                lg:w-[26rem]
+                xl:w-[32rem]
+                2xl:w-[48rem]
+
+                md:-translate-x-1/2  /* desktop reset */
+                lg:left-1/2
+                xl:left-1/2
+                2xl:left-1/2
+
+                pointer-events-none
+        " />
+
+
     </div>
   </section>
 
-  <section>
-    <img class="profile-pic bottom-[0%] absolute left-[36%]  w-[60rem]" src="/images/Picsart_26-01-28_00-03-22-409.png"
-      alt="">
-  </section>
 
   <section class="View-2">
     <div class="marquee">
       <div class="text">
-        <a class="text-red-500" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank">Instagram</a>
+        <a class="text-red-500" href="https://www.instagram.com/prashantfinds?utm_source=qr&igsh=MWZpNGFrNGIwaTExdA==" target="_blank">Instagram</a>
         <a class="text-amber-100" href="https://github.com/prashantdevelopment" target="_blank">GitHub</a>
         <a class="text-red-500" href="mailto:imprashant16006@gmail.com" target="_blank">Gmail</a>
         <a class="text-amber-100" href="https://www.linkedin.com/in/prashant-kumar-1050b929a/"
           target="_blank">LinkedIn</a>
       </div>
       <div class="text">
-        <a class="text-red-500" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank">Instagram</a>
+        <a class="text-red-500" href="https://www.instagram.com/prashantfinds?utm_source=qr&igsh=MWZpNGFrNGIwaTExdA==" target="_blank">Instagram</a>
         <a class="text-amber-100" href="https://github.com/prashantdevelopment" target="_blank">GitHub</a>
         <a class="text-red-500" href="mailto:imprashant16006@gmail.com" target="_blank">Gmail</a>
         <a class="text-amber-100" href="https://www.linkedin.com/in/prashant-kumar-1050b929a/"
@@ -81,10 +193,9 @@
 
 
 
-  <section id="about" class="min-h-screen h-[8vh] bg-black text-white py-24">
+  <section id="about" class="relative bg-black text-white scroll-mt-24 ">
     <!-- Heading -->
-    <span class="inline-block  mb-10 px-16 py-4 rounded-r-full
-                 bg-red-500/20 text-red-400 text-6xl">
+    <span class="inline-block  mb-5 px-16 py-2 rounded-r-full bg-red-500/20 text-red-400 text-4xl">
       About Me
     </span>
 
@@ -97,29 +208,28 @@
           <div class="flex items-center gap-4">
 
 
-            <span class="text-xl tracking-[0.25em] font-thin text-amber-100 ">
+            <span class="text-l tracking-[0.25em] font-thin text-amber-100 max-md:text-sm ">
               Hello World
             </span>
 
             <span class="flex-1 h-px bg-red-500"></span>
           </div>
           <br>
-          <p class="text-white leading-relaxed text-3xl  font-[Helvetica-light] tracking-[0.05em] ml-6 mb-6">
-            I’m <span class="text-amber-100 font-semibold font-[Helvetica-light] text-6xl">Prashant Kumar</span>.
+          <p class="text-white leading-relaxed text-2xl font-[Helvetica-light] tracking-[0.05em] ml-6 mb-3 max-md:text-lg max-md:ml-0">
+            I’m <span class="text-amber-100 font-semibold text-4xl max-md:text-4xl">Prashant Kumar</span>.
             A frontend-focused developer with a strong focus on building scalable, responsive, and user-centric web
             applications using
             modern technologies.
           </p>
 
-          <p class=" text-gray-400 ml-6 mb-10">
+          <p class=" text-gray-400  mb-3">
             I enjoy working on real-world projects, improving UI/UX,
             and constantly learning new tools and techniques.
           </p>
 
           <!-- Contact -->
           <!-- Contact -->
-          <div class="space-y-3 ml-6 text-sm text-gray-300">
-
+          <div class="space-y-3 ml-6 text-sm text-gray-300 max-md:ml-0 max-md:text-xs">
             <!-- Email -->
             <a href="mailto:imprashant16006@gmail.com"
               class="flex text-xl items-center gap-2 opacity-80 hover:opacity-100 hover:text-amber-100 transition-colors">
@@ -137,33 +247,29 @@
         </div>
 
         <!-- Right Image -->
-        <div class="relative flex  flex-col items-center gap-4
-         rounded-[2rem] p-5 max-w-full overflow-hidden
-         shadow-[8px_8px_30px_rgba(239,68,68,0.35)]
-         transition-transform hover:scale-101
-
+        <div class=" relative flex flex-col items-center gap-4 rounded-[2rem] p-5 max-w-full overflow-hidden shadow-[8px_8px_30px_rgba(239,68,68,0.35)] transition-transform hover:scale-101 max-md:p-4 max-md:gap-6
          ">
           <!-- bg-gradient-to-tr from-red-500/40 to-transparent -->
 
 
 
           <div class="flex items-center gap-4 self-start ml-2 w-full">
-            <h2 class="text-xl font-[Abel] uppercase tracking-[0.25em] font-thin text-amber-100">
+            <h2 class="text-xl font-[Abel] uppercase tracking-[0.25em] font-thin text-amber-100 max-md:text-base max-md:tracking-[0.2em]">
               Technologies
             </h2>
-            <div class="w-1/2 h-[2px] bg-amber-100 rounded-full"></div>
+            <div class="w-1/2 h-[2px] bg-amber-100 rounded-full max-md:w-1/3"></div>
           </div>
 
 
 
-          <div class="flex flex-wrap justify-start gap-6">
-            <img class=" transition-transform hover:scale-110 rounded-3xl h-15" src="/icon/html-min.png" alt="">
-            <img class=" transition-transform hover:scale-110 rounded-3xl h-15" src="/icon/css-min.png" alt="">
-            <img class=" transition-transform hover:scale-110 rounded-3xl h-15" src="/icon/tailwind.png" alt="">
-            <img class=" transition-transform hover:scale-110 rounded-3xl h-15" src="/icon/js-min.png" alt="">
-            <img class=" transition-transform hover:scale-110 rounded-3xl h-15" src="/icon/java-logo-1.png" alt="">
-            <img class=" transition-transform hover:scale-110 rounded-3xl h-15" src="/icon/React-icon.svg.png" alt="">
-            <img class=" transition-transform hover:scale-110 rounded-3xl h-15 " src="/icon/node-min.png" alt="">
+          <div class="  flex flex-wrap justify-start gap-6 max-md:gap-4">
+            <img class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/html-min.png" alt="">
+            <img class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/css-min.png" alt="">
+            <img class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/tailwind.png" alt="">
+            <img class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/js-min.png" alt="">
+            <img class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/java-logo-1.png" alt="">
+            <img class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/React-icon.svg.png" alt="">
+            <img class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/node-min.png" alt="">
 
 
 
@@ -206,42 +312,36 @@
 
         <!-- Education -->
 
-        <div class="mt-2 rounded-[2rem] bg-black p-8
-         shadow-[8px_8px_30px_rgba(239,68,68,0.35)]
-         transition-transform hover:scale-[1.01]">
+        <div class=" mt-2 rounded-[2rem] bg-black p-8 shadow-[8px_8px_30px_rgba(239,68,68,0.35)] transition-transform hover:scale-[1.01] max-md:p-5">
 
           <!-- Heading -->
           <div class="flex items-center gap-2 self-start w-full mb-4">
-            <h2 class="text-xl font-[Abel] uppercase tracking-[0.25em]
-               whitespace-nowrap font-thin text-amber-100">
+            <h2 class="text-xl font-[Abel] uppercase tracking-[0.25em] whitespace-nowrap font-thin text-amber-100">
               Education
             </h2>
             <div class="w-1/2 h-[2px] bg-amber-100 rounded-full"></div>
           </div>
 
           <!-- Content (NOW BELOW HEADING) -->
-          <p class="text-white text-lg leading-relaxed">
+          <p class="text-white text-lg leading-relaxed max-md:text-base">
             B.Tech (Computer Science)<br>
             Babu Banarasi Das University, Lucknow | 2023 - 2027
           </p>
 
         </div>
 
-        <div class="mt-2 rounded-[2rem] bg-black p-8
-         shadow-[8px_8px_30px_rgba(239,68,68,0.35)]
-         transition-transform hover:scale-[1.01]">
+        <div class="mt-2 rounded-[2rem] bg-black p-8 shadow-[8px_8px_30px_rgba(239,68,68,0.35)] transition-transform hover:scale-[1.01]">
 
           <!-- Heading -->
           <div class="flex items-center gap-2 self-start w-full mb-4">
-            <h2 class="text-xl font-[Abel] uppercase tracking-[0.25em]
-               whitespace-nowrap font-thin text-amber-100">
+            <h2 class="text-xl font-[Abel] uppercase tracking-[0.25em] whitespace-nowrap font-thin text-amber-100">
               Soft Skills
             </h2>
             <div class="w-1/2 h-[2px] bg-amber-100 rounded-full"></div>
           </div>
-          <div class="flex gap-6">
+          <div class="flex gap-6 max-md:flex-col max-md:gap-3">
             <!-- Content -->
-            <ul style="list-style-type: circle ;" class="text-white ml-4 text-lg space-y-2">
+            <ul style="list-style-type: circle ;" class="text-white ml-4 text-lg space-y-2 max-md:text-base">
               <li>Communication</li>
               <li>Problem Solving</li>
 
@@ -258,190 +358,164 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="
-scroll-mt-28 mt-40 mb-32 px-10 bg-black text-white">
+  <section id="projects" class="relative scroll-mt-24 mt-24 sm:mt-32 mb-24 sm:mb-32 px-4 sm:px-8 lg:px-10 bg-black text-white">
 
     <!-- Heading -->
     <div class="mb-14 mt-40">
-      <h2 class="text-7xl ml-15 font-semibold font-[Helvetica-light] text-amber-100">
+      <h2 class=" text-4xl sm:text-5xl lg:text-7xl font-semibold font-[Helvetica-light] text-amber-100 sm:ml-10 lg:ml-15">
         Crafted with <span class="text-3xl font-[Abel] tracking-[0.25em] font-bold text-red-500">Love.&hearts;</span>
       </h2>
-      <p class=" ml-17 text-gray-400 mt-1">
+      <p class="text-sm sm:text-base text-gray-400 mt-2 sm:ml-12 lg:ml-17">
         These are a few of my recent works
       </p>
-      <div class="w-full mx-auto h-[2px] bg-amber-100 rounded-full"></div>
+      <div class="w-full max-w-6xl mx-auto md:mx-5 h-[2px] bg-amber-100 rounded-full mt-4"></div>
     </div>
 
     <!-- Projects Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
 
       <!-- Project Card -->
-      <div class="group rounded-[1.8rem] bg-black overflow-hidden
-             shadow-[7px_7px_30px_rgba(239,68,68,0.35)]
-             transition-transform hover:-translate-y-2">
-        <img src="/images/project1.png" alt="Project"
-          class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="group rounded-[1.4rem] sm:rounded-[1.8rem] bg-black overflow-hidden shadow-[7px_7px_30px_rgba(239,68,68,0.35)] transition-transform hover:-translate-y-2">
+        <img src="/images/projects/Screenshot 2026-01-29 001909.png" alt="Project" class=" w-full h-50 sm:h-50 object-cover transition-transform duration-300 group-hover:scale-105">
 
-        <div class="p-6">
-          <h3 class="text-lg font-semibold text-amber-100">
-            Portfolio Website
+        <div class="px-4 py-2">
+          <h3 class="text-s font-semibold text-amber-100">
+            A Cafe Landing Page
           </h3>
-          <p class="text-sm text-gray-400 mt-2">
-            A modern personal portfolio built using React and Tailwind CSS.
+          <p class="text-sm text-gray-400 mt-1">
+            A modern Cafe Landing page built using HTML, JS and Tailwind CSS.
           </p>
         </div>
       </div>
       <!-- Project Card -->
-      <div class="group rounded-[1.8rem] bg-black overflow-hidden
-             shadow-[7px_7px_30px_rgba(239,68,68,0.35)]
-             transition-transform hover:-translate-y-2">
-        <img src="/images/project1.png" alt="Project"
-          class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="group rounded-[1.4rem] sm:rounded-[1.8rem] bg-black overflow-hidden shadow-[7px_7px_30px_rgba(239,68,68,0.35)] transition-transform hover:-translate-y-2">
+        <img src="/images/projects/Screenshot 2026-01-29 001948.png" alt="Project" class=" w-full h-50 sm:h-50 object-cover transition-transform duration-300 group-hover:scale-105">
 
-        <div class="p-6">
-          <h3 class="text-lg font-semibold text-amber-100">
-            Portfolio Website
+        <div class="px-4 py-2">
+          <h3 class="text-s font-semibold text-amber-100">
+            A WebCart Website
           </h3>
-          <p class="text-sm text-gray-400 mt-2">
-            A modern personal portfolio built using React and Tailwind CSS.
+          <p class="text-sm text-gray-400 mt-1">
+            A Webcart Website built using React and Tailwind CSS.
           </p>
         </div>
       </div>
       <!-- Project Card -->
-      <div class="group rounded-[1.8rem] bg-black overflow-hidden
-             shadow-[7px_7px_30px_rgba(239,68,68,0.35)]
-             transition-transform hover:-translate-y-2">
-        <img src="/images/project1.png" alt="Project"
-          class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="group rounded-[1.4rem] sm:rounded-[1.8rem] bg-black overflow-hidden shadow-[7px_7px_30px_rgba(239,68,68,0.35)] transition-transform hover:-translate-y-2">
+        <img src="/images/projects/Screenshot 2026-01-29 002017.png" alt="Project" class=" w-full h-50 sm:h-50 object-cover transition-transform duration-300 group-hover:scale-105">
 
-        <div class="p-6">
-          <h3 class="text-lg font-semibold text-amber-100">
-            Portfolio Website
+        <div class="px-4 py-2">
+          <h3 class="text-s font-semibold text-amber-100">
+            ASMR Prompt Store
           </h3>
-          <p class="text-sm text-gray-400 mt-2">
-            A modern personal portfolio built using React and Tailwind CSS.
+          <p class="text-sm text-gray-400 mt-1">
+            A ASMR Prompt Store built using React, Tailwind CSS and RestAPIs.
           </p>
         </div>
       </div>
       <!-- Project Card -->
-      <div class="group rounded-[1.8rem] bg-black overflow-hidden
-             shadow-[7px_7px_30px_rgba(239,68,68,0.35)]
-             transition-transform hover:-translate-y-2">
-        <img src="/images/project1.png" alt="Project"
-          class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="group rounded-[1.4rem] sm:rounded-[1.8rem] bg-black overflow-hidden shadow-[7px_7px_30px_rgba(239,68,68,0.35)] transition-transform hover:-translate-y-2">
+        <img src="/images/projects/Screenshot 2026-01-29 002043.png" alt="Project" class=" w-full h-50 sm:h-50 object-cover transition-transform duration-300 group-hover:scale-105">
 
-        <div class="p-6">
-          <h3 class="text-lg font-semibold text-amber-100">
-            Portfolio Website
+        <div class="px-4 py-2">
+          <h3 class="text-s font-semibold text-amber-100">
+            Ai Recipe Generator
           </h3>
-          <p class="text-sm text-gray-400 mt-2">
-            A modern personal portfolio built using React and Tailwind CSS.
+          <p class="text-sm text-gray-400 mt-1">
+            A Ai Recipe Generator built using React, Tailwind CSS and RestAPIs.
           </p>
         </div>
       </div>
       <!-- Project Card -->
-      <div class="group rounded-[1.8rem] bg-black overflow-hidden
-             shadow-[7px_7px_30px_rgba(239,68,68,0.35)]
-             transition-transform hover:-translate-y-2">
-        <img src="/images/project1.png" alt="Project"
-          class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="group rounded-[1.4rem] sm:rounded-[1.8rem] bg-black overflow-hidden shadow-[7px_7px_30px_rgba(239,68,68,0.35)] transition-transform hover:-translate-y-2">
+        <img src="/images/projects/Screenshot 2026-01-29 002113.png" alt="Project" class=" w-full h-50 sm:h-50 object-cover transition-transform duration-300 group-hover:scale-105">
 
-        <div class="p-6">
-          <h3 class="text-lg font-semibold text-amber-100">
-            Portfolio Website
+        <div class="px-4 py-2">
+          <h3 class="text-s font-semibold text-amber-100">
+            Portfolio
           </h3>
-          <p class="text-sm text-gray-400 mt-2">
-            A modern personal portfolio built using React and Tailwind CSS.
+          <p class="text-sm text-gray-400 mt-1">
+            A Portfolio built using React and Tailwind CSS.
           </p>
         </div>
       </div>
-      <!-- Project Card -->
-      <div class="group rounded-[1.8rem] bg-black overflow-hidden
-             shadow-[7px_7px_30px_rgba(239,68,68,0.35)]
-             transition-transform hover:-translate-y-2">
-        <img src="/images/project1.png" alt="Project"
-          class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105">
+</section>
 
-        <div class="p-6">
-          <h3 class="text-lg font-semibold text-amber-100">
-            Portfolio Website
-          </h3>
-          <p class="text-sm text-gray-400 mt-2">
-            A modern personal portfolio built using React and Tailwind CSS.
-          </p>
+      <!-- Contact Section -->
+      <section id="contact" class=" mt-24 sm:mt-32 px-4 sm:px-8 lg:px-10">
+
+        <!-- Big Message -->
+        <h2 class=" text-3xl sm:text-4x md:text-5xl lg:text-6xl font-semibold text-amber-100 font-[Helvetica-light] leading-tight max-w-5xl">
+          I’d love to hear from you. Whether you have a project,
+          a question, or just want to connect —
+          <span class="text-red-500">let’s talk.</span>
+        </h2>
+
+        <!-- Bottom Grid -->
+        <div class="  mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 items-start md:items-center">
+
+          <!-- Reach Me -->
+          <div>
+            <p class="block text-sm sm:text-base text-gray-300 hover:text-red-400 transition">
+              Reach Me At
+            </p>
+
+            <a href="mailto:prashant@email.com" class="block text-gray-300 hover:text-red-400 transition">
+              imprashant16006@gmail.com
+            </a>
+
+            <a href="https://www.google.com/maps/place/Lucknow,+Uttar+Pradesh,+India" target="_blank"
+              class="block mt-2 text-gray-300 hover:text-red-400 transition">
+              Lucknow, India
+            </a>
+          </div>
+
+          <!-- Social -->
+          <div>
+            <p class="text-xs tracking-widest text-gray-400 mb-4 uppercase">
+              Social
+            </p>
+
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+              <a href="https://www.linkedin.com/in/prashant-kumar-1050b929a/">LinkedIn</a>,<a
+                href="https://github.com/prashantdevelopment">GitHub</a>
+            </p>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-left md:text-right">
+            <a href="mailto:imprashant16006@gmail.com" 
+       class="inline-block
+              text-lg sm:text-xl md:text-2xl
+              tracking-[0.05em]
+              font-light
+              text-red-500
+              bg-green-500
+              px-4 py-2
+
+              rounded-r-3xl        <!-- ✅ MOBILE -->
+              md:rounded-r-none
+              md:rounded-l-3xl     <!-- ✅ DESKTOP -->
+
+              transition-all duration-300
+              hover:scale-[1.08]
+              animate-[subtle-shake_1.6s_ease-in-out_infinite]">
+              Say Hello →
+            </a>
+          </div>
+
         </div>
-      </div>
 
+        <!-- Footer -->
+        <div class="mt-24 mb-15 pt-6 border-t border-white/10 flex justify-between items-center text-sm text-gray-500">
+          <p>© 2026 Prashant Kumar</p>
 
+          <a href="#top" class="">
+            ↑ Back to top
+          </a>
+        </div>
 
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="mt-50 px-10">
-
-    <!-- Big Message -->
-    <h2
-      class="text-4xl md:text-5xl lg:text-6xl font-semibold text-amber-100 font-[Helvetica-light] leading-tight max-w-5xl">
-      I’d love to hear from you. Whether you have a project,
-      a question, or just want to connect —
-      <span class="text-red-500">let’s talk.</span>
-    </h2>
-
-    <!-- Bottom Grid -->
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-
-      <!-- Reach Me -->
-      <div>
-        <p class="text-xs tracking-widest text-gray-400 mb-4 uppercase">
-          Reach Me At
-        </p>
-
-        <a href="mailto:prashant@email.com" class="block text-gray-300 hover:text-red-400 transition">
-          imprashant16006@gmail.com
-        </a>
-
-        <a href="https://www.google.com/maps/place/Lucknow,+Uttar+Pradesh,+India" target="_blank"
-          class="block mt-2 text-gray-300 hover:text-red-400 transition">
-          Lucknow, India
-        </a>
-      </div>
-
-      <!-- Social -->
-      <div>
-        <p class="text-xs tracking-widest text-gray-400 mb-4 uppercase">
-          Social
-        </p>
-
-        <p class="text-gray-300">
-          <a href="https://www.linkedin.com/in/prashant-kumar-1050b929a/">LinkedIn</a>,<a href="https://github.com/prashantdevelopment">GitHub</a>
-        </p>
-      </div>
-
-      <!-- CTA -->
-      <div class="md:text-right">
-        <a href="mailto:imprashant16006@gmail.com" class=" tracking-[0.05em] nav-item font-extralight cursor-pointer resume-rotate inline-block border-none text-2xl text-amber-100
-                                  animate-[subtle-shake_1.6s_ease-in-out_infinite]
-                                    transition-all duration-300
-                                hover:scale-[1.08]  bg-green-500
-                             rounded-l-3xl
-                              px-3 py-1">
-          Say Hello →
-        </a>
-      </div>
-
-    </div>
-
-    <!-- Footer -->
-    <div class="mt-24 mb-15 pt-6 border-t border-white/10 flex justify-between items-center text-sm text-gray-500">
-      <p>© 2026 Prashant Kumar</p>
-
-      <a href="#top" class="">
-        ↑ Back to top
-      </a>
-    </div>
-
-  </section>
+      </section>
 
 
 
