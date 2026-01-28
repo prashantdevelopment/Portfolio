@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url(/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Abel";
+    src: url(/fonts/Abel-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Tangerine";
+    src: url(/fonts/Tangerine-Bold.ttf);
+}
+@font-face {
+    font-family: "ShareTech";
+    src: url(/fonts/ShareTech-Regular.ttf);
+}
+@font-face{
+    font-family: "EduSAHand";
+    src: url(/fonts/EduSAHand-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Helvetica-light";
+    src: url(/fonts/helvetica-light-587ebe5a59211.ttf);
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url(/fonts/Helvetica.ttf);
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(/fonts/Poppins-Regular.ttf);
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: white;
+    
+}
+
+.profile-pic{
+    position: absolute;
+    height: auto;  
+    bottom: 10;  
+    
+                                                                                        
+}
+
+@keyframes subtle-shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-1px); }
+  100% { transform: translateX(0); }
+}
+
+
+.View-2 {
+    width: 100%;
+    padding: 4rem 3rem;
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+.View-2 .marquee {
+    display: flex;
+
+    width: 35%;
+    overflow: hidden;
+    position: relative;
+
+
+
+    mask-image: linear-gradient(to right, transparent 0%,black 10%, black 90%, transparent 100%);
+}
+
+.View-2 .marquee .text {
+    display: flex;
+    gap: 3rem;
+    padding: 0 1.5rem;
+
+    animation: marquee 10s linear infinite both;
+}
+
+.View-2 .marquee .text a {
+    font-size: 2rem;
+    font-weight: 300;
+    
+    text-decoration: none;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
