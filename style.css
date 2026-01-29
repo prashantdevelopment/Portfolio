@@ -159,3 +159,140 @@ html, body{
         transform: translateX(-100%);
     }
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.96);
+    transform-origin: bottom center;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transform-origin: bottom center;
+  }
+}
+
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* LEFT → RIGHT */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* RIGHT → LEFT */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* BOTTOM → UP */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(60px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* SIMPLE FADE */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* POP SCALE */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.tech-icon.active,
+.design-icon.active,
+.tool-icon.active {
+  animation: popUp 0.5s ease forwards;
+}
+
+
+
+
+.animate-left      { animation: slideInLeft 0.9s ease forwards; }
+.animate-right     { animation: slideInRight 0.9s ease forwards; }
+.animate-up        { animation: slideUp 0.9s ease forwards; }
+.animate-fade      { animation: fadeUp 0.8s ease forwards; }
+.animate-pop       { animation: popIn 0.6s ease forwards; }
+
+/* delays */
+.delay-100 { animation-delay: .1s; }
+.delay-200 { animation-delay: .2s; }
+.delay-400 { animation-delay: .4s; }
+.delay-600 { animation-delay: .6s; }
+.delay-800 { animation-delay: .8s; }
+
+
+
+.about-hello.active { animation: slideInLeft .9s ease forwards; }
+.about-line.active  { animation: fadeUp .6s ease forwards .3s; }
+.about-text.active  { animation: fadeUp .7s ease forwards .6s; }
+.about-text1.active  { animation: fadeUp .7s ease forwards .6s; animation-delay: 1s; }
+.about-text2.active  { animation: fadeUp .7s ease forwards .6s; animation-delay: 1.5s; }
+
+.about-tech.active  { animation: slideInRight .9s ease forwards; }
+.about-about.active  { animation: slideInLeft .9s ease forwards; }
+
+
+.about-edu.active,
+.about-skill.active { animation: slideUp .8s ease forwards; }

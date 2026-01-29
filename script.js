@@ -42,3 +42,52 @@ document.querySelectorAll(".nav-item").forEach(item => {
 });
 
 
+// ===== SCROLL ANIMATION SYSTEM =====
+const observerOptions = {
+  threshold: 0.25, // 25% visible hone par trigger
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      if (entry.target.classList.contains("about-tech")) {
+  staggerIcons(".tech-icon", 200);
+  staggerIcons(".design-icon", 230);
+  staggerIcons(".tool-icon", 250);
+}
+      observer.unobserve(entry.target); // 🔥 ek baar hi chale
+    }
+  });
+}, observerOptions);
+
+// ===== STAGGER ICON POP-UP =====
+function staggerIcons(selector, delay = 120) {
+  const icons = document.querySelectorAll(selector);
+
+  icons.forEach((icon, index) => {
+    setTimeout(() => {
+      icon.classList.add("active");
+    }, index * delay);
+  });
+}
+
+
+// ===== SELECT ALL ANIMATED ELEMENTS =====
+const animatedElements = document.querySelectorAll(
+  `
+  .about-hello,
+  .about-line,
+  .about-tech,
+  .about-text,
+  .about-text1,
+  .about-text2,
+  .about-about,
+  .about-edu,
+  .about-skill,
+  .project-card,
+  .contact-animate
+  `
+);
+
+animatedElements.forEach(el => observer.observe(el));

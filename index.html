@@ -95,7 +95,8 @@
         font-[PlayfairDisplay]
         font-bold
         text-amber-100
-
+        opacity-0
+        animate-[fadeScale_0.9s_ease-out_forwards]
         text-[3rem]
         sm:text-[2rem]
         md:text-[6rem]
@@ -115,11 +116,12 @@
                       -translate-x-1/2
                       top-[55%]
                       md:bottom-[-12z%]
-
+                      animate-[fadeUp_0.9s_ease-out_0.3s_forwards] opacity-0
                       md:left-[14%]
                       md:top-auto
                       md:bottom-[-12%]
-
+                       opacity-0
+    animate-[slideFromLeft_0.9s_ease-out_0.3s_forwards]
                       font-[Tangerine]
                       font-bold
                       text-red-500
@@ -139,7 +141,9 @@
                     -translate-x-1/2
                     top-[90%]
                     md:bottom-[-15%]
-
+                    animate-[fadeUp_0.9s_ease-out_0.5s_forwards] opacity-0
+                    opacity-0
+                    animate-[slideFromRight_0.9s_ease-out_0.45s_forwards]
                     md:left-auto
                     md:right-[-10%]
                     md:top-auto
@@ -166,7 +170,7 @@
                 left-1/2
                 top-[52%]
                 md:top-[50%]
-
+                animate-[fadeScale_1.2s_ease-out_0.6s_forwards] opacity-0
                 -translate-x-[50%]   /* 🔥 mobile PNG correction */
                 -translate-y-1/2
 
@@ -181,6 +185,8 @@
                 lg:left-1/2
                 xl:left-1/2
                 2xl:left-1/2
+                 opacity-0
+    animate-[popUp_1s_ease-out_0.6s_forwards]
 
                 pointer-events-none
         " />
@@ -190,7 +196,7 @@
   </section>
 
 
-  <section class="View-2">
+  <section class="View-2 animate-[fadeScale_0.9s_ease-out_forwards] opacity-0">
     <div class="marquee">
       <div class="text">
         <a class="text-red-500" href="https://www.instagram.com/prashantfinds?utm_source=qr&igsh=MWZpNGFrNGIwaTExdA==" target="_blank">Instagram</a>
@@ -215,7 +221,7 @@
 
   <section id="about" class="relative bg-black text-white scroll-mt-24 ">
     <!-- Heading -->
-    <span class="inline-block  mb-5 px-16 py-2 rounded-r-full bg-red-500/20 text-red-400 text-4xl">
+    <span class="inline-block opacity-0 about-about mb-5 px-16 py-2 rounded-r-full bg-red-500/20 text-red-400 text-4xl">
       About Me
     </span>
 
@@ -228,28 +234,28 @@
           <div class="flex items-center gap-4">
 
 
-            <span class="text-l tracking-[0.25em] font-thin text-amber-100 max-md:text-sm ">
+            <span class="text-l tracking-[0.25em] font-thin text-amber-100 max-md:text-sm opacity-0 about-hello ">
               Hello World
             </span>
 
-            <span class="flex-1 h-px bg-red-500"></span>
+            <span class="flex-1 h-px bg-red-500 opacity-0 about-line"></span>
           </div>
           <br>
-          <p class="text-white leading-relaxed text-2xl font-[Helvetica-light] tracking-[0.05em] ml-6 mb-3 max-md:text-lg max-md:ml-0">
+          <p class="text-white leading-relaxed text-2xl font-[Helvetica-light] tracking-[0.05em] ml-6 mb-3 max-md:text-lg max-md:ml-0 opacity-0 about-text">
             I’m <span class="text-amber-100 font-semibold text-4xl max-md:text-4xl">Prashant Kumar</span>.
             A frontend-focused developer with a strong focus on building scalable, responsive, and user-centric web
             applications using
             modern technologies.
           </p>
 
-          <p class=" text-gray-400  mb-3">
+          <p class=" text-gray-400 ml-6  mb-3 opacity-0 about-text1">
             I enjoy working on real-world projects, improving UI/UX,
             and constantly learning new tools and techniques.
           </p>
 
           <!-- Contact -->
           <!-- Contact -->
-          <div class="space-y-3 ml-6 text-sm text-gray-300 max-md:ml-0 max-md:text-xs">
+          <div class="space-y-3 ml-6 text-sm text-gray-300 max-md:ml-0 max-md:text-xs opacity-0 about-text2">
             <!-- Email -->
             <a href="mailto:imprashant16006@gmail.com"
               class="flex text-xl items-center gap-2 opacity-80 hover:opacity-100 hover:text-amber-100 transition-colors">
@@ -267,7 +273,7 @@
         </div>
 
         <!-- Right Image -->
-        <div class=" relative flex flex-col items-center gap-4 rounded-[2rem] p-5 max-w-full overflow-hidden shadow-[8px_8px_30px_rgba(239,68,68,0.35)] transition-transform hover:scale-101 max-md:p-4 max-md:gap-6
+        <div class=" opacity-0 about-tech relative flex flex-col items-center gap-4 rounded-[2rem] p-5 max-w-full overflow-hidden shadow-[8px_8px_30px_rgba(239,68,68,0.35)] transition-transform hover:scale-101 max-md:p-4 max-md:gap-6
          ">
           <!-- bg-gradient-to-tr from-red-500/40 to-transparent -->
 
@@ -283,32 +289,17 @@
 
 
           <div class="  flex flex-wrap justify-start gap-6 max-md:gap-4">
-            <img loading="lazy" class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/html-min.png" alt="">
-            <img loading="lazy" class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/css-min.png" alt="">
-            <img loading="lazy" class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/tailwind.png" alt="">
-            <img loading="lazy" class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/js-min.png" alt="">
-            <img loading="lazy" class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/java-logo-1.png" alt="">
-            <img loading="lazy" class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/React-icon.svg.png" alt="">
-            <img loading="lazy" class="  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/node-min.png" alt="">
+            <img loading="lazy" class=" opacity-0 tech-icon opacity-0  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/html-min.png" alt="">
+            <img loading="lazy" class=" opacity-0 tech-icon opacity-0  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/css-min.png" alt="">
+            <img loading="lazy" class=" opacity-0 tech-icon opacity-0  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/tailwind.png" alt="">
+            <img loading="lazy" class=" opacity-0 tech-icon opacity-0  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/js-min.png" alt="">
+            <img loading="lazy" class=" opacity-0 tech-icon opacity-0  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/java-logo-1.png" alt="">
+            <img loading="lazy" class=" opacity-0 tech-icon opacity-0  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/React-icon.svg.png" alt="">
+            <img loading="lazy" class=" opacity-0 tech-icon opacity-0  transition-transform hover:scale-110 rounded-3xl h-15 max-md:h-12" src="/icon/node-min.png" alt="">
 
 
 
             <br>
-            <div class="flex items-center gap-4 self-start ml-2 w-full">
-              <h2 class="text-xl font-[Abel] uppercase tracking-[0.25em] font-thin text-amber-100">
-                Designing
-              </h2>
-              <div class="w-1/2 h-[2px] bg-amber-100 rounded-full"></div>
-            </div>
-
-
-            <div class="flex flex-wrap justify-start gap-6">
-              <img loading="lazy" class=" transition-transform hover:scale-110 rounded-xl h-15" src="/icon/figma-min.png" alt="">
-              <img loading="lazy" class=" transition-transform hover:scale-110 rounded-3xl h-15" src="/icon/canva.png" alt="">
-
-
-            </div>
-
             <div class="flex items-center gap-4 self-start ml-2 w-full">
               <h2 class="text-xl font-[Abel] uppercase tracking-[0.25em] font-thin text-amber-100">
                 Tools
@@ -318,13 +309,30 @@
 
 
             <div class="flex flex-wrap justify-start gap-6">
-              <img loading="lazy" class=" transition-transform hover:scale-110 rounded-xl h-15" src="/icon/postman.png" alt="">
-              <img loading="lazy" class="transition-transform hover:scale-110 rounded-xl h-15" src="/icon/redux.png" alt="">
-              <img loading="lazy" class=" transition-transform hover:scale-110 bg-amber-100 rounded-3xl h-15 "
+              <img loading="lazy" class=" tech-icon opacity-0 transition-transform hover:scale-110 rounded-xl h-15" src="/icon/postman.png" alt="">
+              <img loading="lazy" class=" tech-icon opacity-0 transition-transform hover:scale-110 rounded-xl h-15" src="/icon/redux.png" alt="">
+              <img loading="lazy" class=" tech-icon opacity-0 transition-transform hover:scale-110 bg-amber-100 rounded-3xl h-15 "
                 src="/icon/github-min.png" alt="">
 
 
             </div>
+
+            <div class="flex items-center gap-4 self-start ml-2 w-full">
+              <h2 class="text-xl font-[Abel] uppercase tracking-[0.25em] font-thin text-amber-100">
+                Designing
+              </h2>
+              <div class="w-1/2 h-[2px] bg-amber-100 rounded-full"></div>
+            </div>
+
+
+            <div class="flex flex-wrap justify-start gap-6">
+              <img loading="lazy" class=" tech-icon opacity-0 transition-transform hover:scale-110 rounded-xl h-15" src="/icon/figma-min.png" alt="">
+              <img loading="lazy" class=" tech-icon opacity-0 transition-transform hover:scale-110 rounded-3xl h-15" src="/icon/canva.png" alt="">
+
+
+            </div>
+
+            
           </div>
         </div>
 
@@ -332,7 +340,7 @@
 
         <!-- Education -->
 
-        <div class=" mt-2 rounded-[2rem] bg-black p-8 shadow-[8px_8px_30px_rgba(239,68,68,0.35)] transition-transform hover:scale-[1.01] max-md:p-5">
+        <div class=" mt-2 opacity-0 about-edu rounded-[2rem] bg-black p-8 shadow-[8px_8px_30px_rgba(239,68,68,0.35)] transition-transform hover:scale-[1.01] max-md:p-5">
 
           <!-- Heading -->
           <div class="flex items-center gap-2 self-start w-full mb-4">
@@ -350,7 +358,7 @@
 
         </div>
 
-        <div class="mt-2 rounded-[2rem] bg-black p-8 shadow-[8px_8px_30px_rgba(239,68,68,0.35)] transition-transform hover:scale-[1.01]">
+        <div class="mt-2 opacity-0 about-skill  rounded-[2rem] bg-black p-8 shadow-[8px_8px_30px_rgba(239,68,68,0.35)] transition-transform hover:scale-[1.01]">
 
           <!-- Heading -->
           <div class="flex items-center gap-2 self-start w-full mb-4">
